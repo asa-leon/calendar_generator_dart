@@ -3,14 +3,15 @@ import 'package:test/test.dart';
 
 void main() {
   group('A group of tests', () {
-    final awesome = Awesome();
+    final calendarController = CalendarController();
 
     setUp(() {
       // Additional setup goes here.
     });
 
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
+    test('functions in build scope returns accurate number', () {
+      expect(calendarController.getFirstWeekday(DateTime.now()), 2);
+      expect(calendarController.getLastDays(DateTime.now()), {'previous': 31, 'base': 31});
     });
   });
 }

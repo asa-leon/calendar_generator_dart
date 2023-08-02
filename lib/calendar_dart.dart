@@ -64,7 +64,10 @@ class CalendarController {
   /// Returns last days for both of a base month(set as the argument) and its previous one.
   Map<String, int> getLastDays(DateTime date) {
 
-    const Map<String, int> mapData = {};
+    var mapData = <String, int>{
+      'previous': 0,
+      'base': 0,
+    };
     
     final int previousMonthLastDay = DateTime(date.year, date.month, 0).day;
     final int baseMonthLastDay = DateTime(date.year, date.month + 1, 0).day;
@@ -72,7 +75,9 @@ class CalendarController {
     mapData['previous'] = previousMonthLastDay;
     mapData['base'] = baseMonthLastDay;
 
-    return mapData;
+    final lastDaysMap = Map<String, int>.unmodifiable(mapData);
+
+    return lastDaysMap;
   }
 
 }
