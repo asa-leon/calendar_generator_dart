@@ -7,6 +7,12 @@ export 'src/calendar_controller_base.dart';
 
 // TODO: Export any libraries intended for clients of this package.
 
+void main() {
+  final calendarData = CalendarController();
+  calendarData.startFromMonday = false;
+  print(calendarData.build(DateTime.now())[0]);
+}
+
 /// A Class generates a calendar of one month.
 class CalendarController {
 
@@ -106,6 +112,10 @@ class CalendarController {
   ///
   /// FUNCTIONS
   /// 
+  void setStartFromMonday(bool boolean) {
+    startFromMonday = boolean;
+  } 
+  
   /// Returns a first weekday(Type of int; 1 = Monday, 7 = Sunday)
   /// of [date] belongs to.
   int getFirstWeekday(DateTime date) {
