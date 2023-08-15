@@ -1,4 +1,4 @@
-import 'package:calendar_controller/calendar_controller.dart';
+import 'package:calendar_generator/calendar_generator.dart';
 
 void main() {
   var awesome = Awesome();

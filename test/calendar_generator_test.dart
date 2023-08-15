@@ -1,4 +1,4 @@
-import 'package:calendar_controller/calendar_controller.dart';
+import 'package:calendar_generator/calendar_generator.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -11,7 +11,7 @@ void main() {
 
       final DateTime date = DateTime(2023, 8);
 
-      final calendarController = CalendarController();
+      final calendarController = CalendarGenerator();
       calendarController.startFromMonday = false;
       
       final calendarData = calendarController.build(date);

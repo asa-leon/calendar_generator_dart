@@ -1,20 +1,20 @@
 /// Support for doing something awesome.
 ///
 /// More dartdocs go here.
-library calendar_controller;
+library calendar_generator;
 
-export 'src/calendar_controller_base.dart';
+export 'src/calendar_generator_base.dart';
 
 // TODO: Export any libraries intended for clients of this package.
 
 void main() {
-  final calendarData = CalendarController();
+  final calendarData = CalendarGenerator();
   calendarData.startFromMonday = false;
   print(calendarData.build(DateTime.now())[0]);
 }
 
 /// A Class generates a calendar of one month.
-class CalendarController {
+class CalendarGenerator {
 
   /// Set a boolean; if true, it means a start of week is Monday, or Sunday.
   late bool startFromMonday;
